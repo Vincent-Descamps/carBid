@@ -1,0 +1,50 @@
+body {
+  min-height: 100vh;
+  background-color: #f8f8fa;
+}
+
+#status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#mainContainer {
+  margin: 10vh 30vw;
+  font-family: sans-serif;
+  background-color: white;
+  box-shadow: 4px 5px 8px #525252;
+  padding: 20px;
+}
+
+#mainContainer h1 {
+  color: #f7a52c;
+  text-align: center;
+}
+
+#mainContainer p {
+  text-align: center;
+  font-weight: 300rem;
+  font-size: 1rem;
+}
+
+#form {
+  display: inline-block;
+  flex-wrap: wrap;
+}
+
+.img {
+  text-align: center;
+}
+
+.Annonces {
+  background-color: #525252;
+  color: #f7a52c;
+  width: 15%;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 4px 5px 8px #753333;
+}
+.photo {
+  width: 100%;
+}

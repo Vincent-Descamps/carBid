@@ -1,0 +1,29 @@
+body {
+  min-height: 100vh;
+  background-color: #fdf0d5;
+}
+
+#status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#mainContainer {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#annonce {
+  text-align: center;
+  color: white;
+  background-color: #003049;
+  max-width: 33%;
+}
+
+img {
+  width: 100%;
+}
