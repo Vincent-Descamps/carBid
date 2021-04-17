@@ -9,7 +9,7 @@ class Deconnexion
     public function deco()
     {
         session_destroy();
-        header('Location: /projet');
+        header('Location: /');
         exit;
     }
 }

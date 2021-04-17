@@ -31,7 +31,7 @@ class User
         <body>
             <div id="mainContainer">
                 <div class="link">
-                    <a href="/projet">Home</a>
+                    <a href="/">Home</a>
                 </div>
                 <h1>Formulaire d'inscription</h1>
                 <br>

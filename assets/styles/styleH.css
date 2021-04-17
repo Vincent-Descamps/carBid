@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  background-color: #f8f8fa;
+  background-color: #fdf0d5;
 }
 
 #status {
@@ -38,13 +38,22 @@ body {
 }
 
 .Annonces {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#annonce {
   background-color: #525252;
   color: #f7a52c;
-  width: 15%;
+  width: 35vh;
+  height: 50vh;
   padding: 50px;
   text-align: center;
   box-shadow: 4px 5px 8px #753333;
 }
+
 .photo {
-  width: 100%;
+  max-width: 100%;
+  max-height: 40%;
 }

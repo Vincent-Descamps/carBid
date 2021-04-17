@@ -42,7 +42,7 @@ class Connexion
                 $_SESSION['password'] = $password;
 
                 echo 'Vous etes bien connecté !';
-                header('Location: /projet');
+                header('Location: /');
                 exit;
             } else {
                 echo 'Votre mot de passe n\'est pas correct !';

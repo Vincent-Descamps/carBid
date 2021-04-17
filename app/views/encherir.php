@@ -27,19 +27,19 @@ class Encherir
         <head>
             <meta charset="utf-8">
             <title>Enchère</title>
-            <link rel="stylesheet" type="text/css" href="/projet/assets/styles/styleBid.css" />
+            <link rel="stylesheet" type="text/css" href="/assets/styles/styleBid.css" />
         </head>
 
         <body>
             <div id="status">
                 <div class="welcome">
                     <?php if ($_SESSION) {
-                        echo $_SESSION['firstname'] . '  😃' . ' ' . '<a href="/Projet/deconnexion">Deconnexion</a>';
+                        echo $_SESSION['firstname'] . '  😃' . ' ' . '<a href="/deconnexion">Deconnexion</a>';
                     }
                     ?>
                 </div>
                 <div class="link">
-                    <a href="/projet">Home</a>
+                    <a href="/">Home</a>
                 </div>
             </div>
             <div id="mainContainer">
@@ -76,7 +76,7 @@ class Encherir
                     </div>
                 <?php } else { ?>
                     <p><i>Vous devez avoir un compte utilisateur pour Encherir</i></p>
-                    <a href="/Projet/user">Inscription</a><br><a href="/Projet/connexion">Connexion</a>
+                    <a href="/user">Inscription</a><br><a href="/connexion">Connexion</a>
                 <?php } ?>
             </div>
         </body>

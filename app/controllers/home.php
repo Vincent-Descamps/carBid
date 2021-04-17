@@ -15,7 +15,6 @@ use App\Database\Database;
 class Home
 
 {
-
     /**
      * Affichage de la page d'accueil
      */
@@ -27,14 +26,14 @@ class Home
 
         <head>
             <meta charset="utf-8">
+            <link rel="stylesheet" type="text/css" href="./assets/styles/styleH.css" />
             <title>Enchères</title>
-            <link rel="stylesheet" type="text/css" href="/projet/assets/styles/style.css" />
         </head>
 
         <body>
             <div id="status">
                 <?php if ($_SESSION) {
-                    echo 'Bienvenue' . ' ' . $_SESSION['firstname'] . ' vous êtes connecté. 😃' . ' ' . '<h5><a href="/Projet/deconnexion">Deconnexion</a></h5>';
+                    echo 'Bienvenue' . ' ' . $_SESSION['firstname'] . ' vous êtes connecté. 😃' . ' ' . '<h5><a href="/deconnexion">Deconnexion</a></h5>';
                 }
                 ?>
             </div>
@@ -43,9 +42,9 @@ class Home
                 <h1>Le meilleur des enchères.</h1>
                 <h1>Bienvenue</h1>
                 <div class="link">
-                    <a href="/Projet/form">Vendeur </a><br>
-                    <a href="/Projet/user">Inscription</a><br>
-                    <a href="/Projet/connexion">Connexion</a>
+                    <a href="/form">Vendeur </a><br>
+                    <a href="/user">Inscription</a><br>
+                    <a href="/connexion">Connexion</a>
                 </div>
             </div>
             <div class="Annonces">
@@ -60,10 +59,20 @@ class Home
                             <h3>Enchère #<?= $key ?></h3>
                             <h2><b><?= $value['marque'] . ' ' . $value['modele'] . ' ' . $value['annee'] ?></b></h2>
                             <img class="photo" src="<?= $value['photo'] ?>" />
-                            <br>
                             <p><b>Au compteur : </b><?= $value['kilometrage'] ?>km</p>
                             <p><?= $value['description'] ?></p>
                             <p>Prix de départ :<?= $value['start_price'] ?></p>
+                            <p>Fin de l'enchère le <?= $value['date_end'] ?></p>
+                            <?php
+                            $date = strtotime($value['date_end']);
+                            $remaining = $date - time();
+                            $days_remaining = floor($remaining / 86400);
+                            $hours_remaining = floor(($remaining % 86400) / 3600);
+                            $minutes_remaining = floor((($remaining % 86400) / 3600) / 60);
+
+                            echo "Il reste $days_remaining jours, $hours_remaining heures et $minutes_remaining minutes avant la fin de l'enchère";
+                            ?>
+                            <br>
                             <a href="encherir/<?= $value['id'] ?>"><input type="button" value="Details" /></a>
                         </div>
                     </ul>
@@ -76,5 +85,6 @@ class Home
 
         </html>
 <?php
+
     }
 }

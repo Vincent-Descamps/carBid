@@ -34,7 +34,7 @@ class Connexion
 
             <body>
                 <div class="link">
-                    <a href="/projet">Home</a>
+                    <a href="/">Home</a>
                 </div>
                 <div id="mainContainer">
                     <h1>Page de connexion</h1>
