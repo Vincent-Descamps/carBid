@@ -33,10 +33,10 @@ class Connexion
             <html>
 
             <body>
-                <div class="link">
-                    <a href="/">Home</a>
-                </div>
                 <div id="mainContainer">
+                    <div class="link">
+                        <a href="/">Home</a>
+                    </div>
                     <h1>Page de connexion</h1>
                     <div id="form1">
                         <form action="connexion" method="POST">
