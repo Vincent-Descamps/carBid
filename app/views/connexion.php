@@ -26,17 +26,17 @@ class Connexion
             <meta charset="utf-8">
             <title>formulaire</title>
 
-            <link rel="stylesheet" type="text/css" href="assets/styles/styleH.css" />
+            <link rel="stylesheet" type="text/css" href="assets/styles/style.css" />
         </head>
 
         <body>
             <html>
 
             <body>
-                <div class="link">
-                    <a href="/">Home</a>
-                </div>
                 <div id="mainContainer">
+                    <div class="link">
+                        <a href="/">Home</a>
+                    </div>
                     <h1>Page de connexion</h1>
                     <div id="form1">
                         <form action="connexion" method="POST">
