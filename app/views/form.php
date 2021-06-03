@@ -25,7 +25,7 @@ class Form
             <meta charset="utf-8">
             <title>formulaire</title>
 
-            <link rel="stylesheet" type="text/css" href="assets/styles/styleH.css" />
+            <link rel="stylesheet" type="text/css" href="assets/styles/style.css" />
         </head>
 
         <body>

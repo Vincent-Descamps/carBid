@@ -26,7 +26,7 @@ class Home
 
         <head>
             <meta charset="utf-8">
-            <link rel="stylesheet" type="text/css" href="./assets/styles/styleH.css" />
+            <link rel="stylesheet" type="text/css" href="./assets/styles/style.css" />
             <title>Enchères</title>
         </head>
 
@@ -70,9 +70,9 @@ class Home
                             $hours_remaining = floor(($remaining % 86400) / 3600);
                             $minutes_remaining = floor((($remaining % 86400) / 3600) / 60);
 
-                            echo "Il reste $days_remaining jours, $hours_remaining heures et $minutes_remaining minutes avant la fin de l'enchère";
+                            // echo "Il reste $days_remaining jours, $hours_remaining heures et $minutes_remaining minutes avant la fin de l'enchère";
                             ?>
-                            <br>
+
                             <a href="encherir/<?= $value['id'] ?>"><input type="button" value="Details" /></a>
                         </div>
                     </ul>
