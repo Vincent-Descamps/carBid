@@ -27,7 +27,7 @@ class Encherir
         <head>
             <meta charset="utf-8">
             <title>Enchère</title>
-            <link rel="stylesheet" type="text/css" href="/assets/styles/styleBid.css" />
+            <link rel="stylesheet" type="text/css" href="/assets/styles/styleBd.css" />
         </head>
 
         <body>
@@ -50,7 +50,7 @@ class Encherir
                 ?>
 
                     <div id="annonce">
-                        <h2><b><?= $value['marque'] . $value['modele'] . $value['annee'] ?></b></h2>
+                        <h2><b><?= $value['marque'] . ' ' . $value['modele'] . ' ' . $value['annee'] ?></b></h2>
                         <img class="photo" src="<?= $value['photo'] ?>" />
                         <br>
                         <p><b>Au compteur : </b><?= $value['kilometrage'] ?>km</p>
@@ -59,7 +59,6 @@ class Encherir
                     </div>
                 <?php
                 }
-
                 if ($_SESSION) {
                 ?>
                     <div id="form">
@@ -71,13 +70,28 @@ class Encherir
                             <input type="hidden" value="<?= $value['id'] ?>" name="car_id">
                             <br>
                             <input type="submit" value="Encherir" />
-
                         </form>
                     </div>
                 <?php } else { ?>
                     <p><i>Vous devez avoir un compte utilisateur pour Encherir</i></p>
                     <a href="/user">Inscription</a><br><a href="/connexion">Connexion</a>
                 <?php } ?>
+
+                <div id="bid">
+                    <?php
+                    $results = $dbh->query("SELECT firstname, lastname FROM User LEFT JOIN Enchere ON User.id = Enchere.user_id");
+                    //var_dump($value['lastname']);
+                    $result = $dbh->query("SELECT * FROM Enchere WHERE car_id = $value[id]")->fetchAll(\PDO::FETCH_ASSOC);
+                    foreach ($result as $value) {
+
+                    ?>
+
+                        <div class="bid">
+                            <p><?= ' ' . $value['amount'] ?></p>
+                        </div>
+                    <?php }
+                    ?>
+                </div>
             </div>
         </body>
 
